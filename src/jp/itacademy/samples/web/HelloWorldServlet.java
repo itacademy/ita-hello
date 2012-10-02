@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/index")
 public class HelloWorldServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request,
-            HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html; charset=utf-8");
-        PrintWriter out = response.getWriter();
+    protected void doGet(HttpServletRequest req, HttpServletResponse res)
+            throws ServletException, IOException {
+        res.setContentType("text/html; charset=utf-8");
+        PrintWriter out = res.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<meta charset=\"utf-8\">");
         out.println("<h1>Hello World!!</h1>");
